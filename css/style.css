@@ -1,11 +1,174 @@
 /* reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Heebo', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
 }
 
-body {
-    background-color: red;
+/* utility */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* logo */
+
+.logo {
+  width: 200px;
+  border-right: 1px solid #c6c6c6;
+  padding-right: 20px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* navbar */
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 20px;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #8b8b8b;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  color: beige;
+  background-image: linear-gradient(red, yellow);
+}
+
+/* hero */
+
+.hero {
+  position: relative;
+  height: 500px;
+  min-width: 420px;
+  margin-top: 30px;
+  border-radius: 20px;
+  /* background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center; */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hoverlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bottom-header-text {
+  width: 50%;
+  color: white;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+}
+
+.bottom-header-text span {
+  display: block;
+}
+
+#bottom-header-title {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+/* main */
+
+main {
+  margin: 30px 0;
+  padding-bottom: 10px;
+  min-width: 545px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.main-title {
+  height: 100px;
+}
+
+.main-container .col {
+  margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+  width: 20%;
+}
+.center-column {
+  width: 55%;
+  margin: 0 2.5%;
+}
+
+.left {
+  float: left;
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+  background-color: grey;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.subtitle,
+.main-subtitle {
+  font-size: 18px;
+}
+
+.main-subtitle,
+.text span p {
+  color: #8b8b8b;
+  margin-top: 10px;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.red-heart {
+  color: red;
+  font-size: 24px;
 }
